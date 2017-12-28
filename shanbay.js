@@ -40,8 +40,8 @@ request(
         uri: "https://www.shanbay.com/api/v1/account/login/web/",
         resolveWithFullResponse: true,
         formData: {
-            'username': '18940874730',
-            'password': 'csc201592049',
+            'username': '',
+            'password': '',
         }
     })
     .then((httpResponse) => {
