@@ -2,7 +2,7 @@
 
 **环境 node，请预先安装node环境**
 ```
-在该目录下 npm install
+安装依赖,在该目录下 npm install
 ```
 
 | 脚本   |      用法      |
@@ -13,4 +13,6 @@
 
 
 [you-get批量下载](download.js)
+<br>
+<br>
 [扇贝每日自动打卡领取贝壳](shanbay.js)
