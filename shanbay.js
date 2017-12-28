@@ -6,13 +6,13 @@ let read = (id, time) => {
     request(
         {
             method: 'PUT',
-            uri: "https://www.shanbay.com/api/v2/news/user/articles/iuoin/",
+            uri: `https://www.shanbay.com/api/v2/news/user/articles/${id}/`,
             body: {
                 "operation": "finish",
-                "used_time": 264.2
+                "used_time": time
             },
             headers: {
-                "Referer": "https://www.shanbay.com/news/articles/iuoin",
+                "Referer": `https://www.shanbay.com/news/articles/${id}`,
                 "X-CSRFToken": csrftoken,
                 "content-type": "application/json"
             },
@@ -22,16 +22,15 @@ let read = (id, time) => {
             console.log(body);
             return request(
                 {
-                    uri: "https://www.shanbay.com/api/v2/news/articles/wbhkq/",
+                    uri: `https://www.shanbay.com/api/v2/news/articles/${id}/`,
                     headers: {
-                        // "Referer": "https://www.shanbay.com/api/v2/news/articles/wbhkq/",
                         "X-CSRFToken": csrftoken
                     },
                     json: true
                 })
         })
         .then((body) => {
-            console.log(body);
+            console.log(body.data.is_finished);
         })
 };
 request(
@@ -57,12 +56,9 @@ request(
     .then((body) => {
         objects = body.data.objects;
         objects.forEach(obj => {
-            console.log(obj.title_en);
             let id = obj.id;
             //用长度充当时间
             let length = obj.length;
-            console.log(id);
-            console.log(length);
             read(id, length);
         });
 
