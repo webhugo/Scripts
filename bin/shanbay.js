@@ -39,8 +39,8 @@ request(
         uri: "https://www.shanbay.com/api/v1/account/login/web/",
         resolveWithFullResponse: true,
         formData: {
-            'username': '',
-            'password': '',
+            'username': '18940874730',
+            'password': 'csc201592049',
         }
     })
     .then((httpResponse) => {
@@ -55,13 +55,17 @@ request(
     })
     .then((body) => {
         objects = body.data.objects;
-        objects.forEach(obj => {
+        let time = setInterval(() => {
+            if (objects.length === 0) {
+                clearInterval(time);
+                return;
+            }
+            let obj = objects.shift();
             let id = obj.id;
-            //用长度充当时间
+            // 用长度充当时间
             let length = obj.length;
             read(id, length);
-        });
-
+        }, 1000);
     });
 
 
