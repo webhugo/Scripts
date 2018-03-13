@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            -webkit-print-color-adjust: exact;
+        }
+
+        .body {
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+
+            margin: 10px 0;
+        }
+        #name{
+            align-self:center ;
+        }
+        #name span {
+            font-size: 1.5em;
+            font-weight: 500;
+        }
+
+        #base-info span {
+            font-size: 1em;
+            font-weight: normal;
+        }
+
+        .title {
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        .main-title {
+            font-size: 1em;
+            font-weight: 500;
+        }
+
+        .line {
+            width: 100%;
+            background-color: black;
+            height: 1px;
+            margin: 10px auto;
+        }
+
+        .content {
+            font-size: 1em;
+        }
+
+        .content ul > li {
+            margin-left: 20px;
+        }
+
+        .project {
+            margin-bottom: 20px;
+        }
+
+        .project-name {
+            font-weight: 600;
+        }
+
+        .project-info {
+            display: flex;
+            justify-content: space-between;
+            background-color: #c8e6d5;
+        }
+
+        .position {
+            margin: 5px 0;
+            font-style: italic;
+        }
+    </style>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+</head>
+<body>
+<div class="body">
+    <div class="header">
+        <div id="name"><span>Shanchuan Cheng</span></div>
+        <div id="base-info">
+            <div><span><i class="far fa-envelope"></i>&nbsp;Email : ch.shanchuan@gmail.com</span></div>
+            <div><span><i class="fas fa-mobile-alt"></i>&nbsp;&nbsp;Mobile : (+86)18940874730</span></div>
+            <div><span><i class="fab fa-github"></i>&nbsp;GitHub : https://github.com/webhugo</span></div>
+        </div>
+    </div>
+    <div class="education title">
+        <p class="main-title"><span><i class="fas fa-graduation-cap"></i>&nbsp;EDUCATION</span></p>
+        <div class="line">
+            <p></p>
+        </div>
+        <div class="education-content content">
+            <div style="display: flex;justify-content: space-between;">
+                <p><span style="font-weight: bold">Dalian University of Technology</span></p>
+                <p>Sep 2015 – Present</p>
+            </div>
+            <p>
+                <span>undergraduate bachelor</span>&nbsp;&nbsp;&nbsp;
+                <span>software engineering</span>&nbsp;&nbsp;&nbsp;
+                <span>GPA 3.24(standard algorithm) / CET6 531</span>
+            </p>
+            <p>expected graduation time is June 2019</p>
+        </div>
+    </div>
+    <div class="skill title">
+        <p class="main-title"><span><i class="fas fa-wrench"></i>&nbsp;LEARNING SKILL</span></p>
+        <div class="line"></div>
+        <div class="skill-content content">
+            <ul>
+                <li>Familiar with Java and NodeJS, acquaintant with python/c/c++ and other languages, familiar with Linux basic operations, can basically use NoSQL such as redis and other databases such as MySQL</li>
+                <li>Familiar with NodeJS backend development, familiar with the use of Koa and other frameworks, familiar with Sequelize, Mocha and other class libraries, and able to complete the normal back-end logic, with project experience.</li>
+                <li>Familiar with the JavaWeb backend development, familiar with the use of spring, mybatis, and other frameworks, and try to develop the my framework: (https://github.com/webhugo/kobe_framework), and able to complete the normal back-end logic, with project experience.</li>
+                <li>Have front-end development ability, acquaintant with React, be familiar with Webpack, Gulp and other front-end construction tools, and have project experience.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="experience title">
+        <p class="main-title"><span><i class="fas fa-cogs"></i>&nbsp;PROJECT EXPERIENCE</span></p>
+        <div class="line"></div>
+        <div class="experience-content">
+            <div class="project content">
+                <p class="project-info"><span><span class="project-name">youyun</span><span>·OurEDA Innovation team</span></span><span>May 2017 – Present</span>
+                </p>
+                <p class="position">Back-end developer (unique) / Web page developer (unique) / main maintainer</p>
+                <div class="detail">
+                    <ul>
+                        <li>Youyun is an app for file transfer, according to the current campus file sharing is slow, not convenient, sharing ideas such as the poor development, without logining (also support mobile phone / WeChat / qq login, JWT login security), by extracting code to download files, the fast pass, breakpoint HTTP, instant communication, community activities to push other functions.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="project  content">
+                <p class="project-info"><span><span class="project-name">rootlink</span><span>·OurEDA Innovation team</span>&nbsp;&nbsp;<span style="font-style: italic">(http://www.rootlink.cn/)</span></span><span>Oct 2017 – 至今</span>
+                </p>
+                <p class="position">Back-end developer (unique) / main maintainer</p>
+                <div class="detail">
+                    <ul>
+                        <li>Rootlink is a free cloud platform of the Internet of things. It aims to build an IOT intelligent center by using the Internet, open source hardware and software, smart phones and App. The data interface provided by rootlink, users can put their sensor access via the Internet rootlink things cloud platform, so as to realize the sensor data acquisition provides whenever and wherever possible, things cloud platform support for some Home Furnishing intelligent devices to access the internet.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="project content">
+                <p class="project-info"><span><span
+                        class="project-name">Wolves kill</span></span><span>Oct 2016 – Feb 2017</span></p>
+                <p class="position">Back-end developer (unique)</p>
+                <div class="detail">
+                    <ul>
+                        <li>Werewolf killing is a offline game terminal, simulating the function of God, completing broadcasting, logical determination, combining with embedded devices, controlling lighting and other functions, greatly enhancing the player's game experience. This product belongs to the outsourcing project, has been delivered, at present some board games shop on line in Dalian.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="other title">
+        <p class="main-title"><span><i class="fab fa-github-alt"></i>&nbsp;OTHERS</span></p>
+        <div class="line"></div>
+        <div class="other-content  content">
+            <ul>
+                <li>National Computer Programming Competition first prize</li>
+                <li>Personal blog : https://webhugo.github.io/</li>
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+</html>

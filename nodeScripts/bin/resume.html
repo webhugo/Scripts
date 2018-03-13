@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            -webkit-print-color-adjust: exact;
+            -webkit-user-select: text;
+        }
+
+        .body {
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+
+            margin: 10px 0;
+        }
+
+        #name {
+            align-self: center;
+        }
+
+        #name span {
+            font-size: 1.5em;
+            font-weight: 500;
+        }
+
+        #base-info span {
+            font-size: 1em;
+            font-weight: normal;
+        }
+
+        .title {
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        .main-title {
+            font-size: 1em;
+            font-weight: 500;
+        }
+
+        .line {
+            width: 100%;
+            background-color: black;
+            height: 1px;
+            margin: 10px auto;
+        }
+
+        .content {
+            font-size: 1em;
+        }
+
+        .content ul > li {
+            margin-left: 20px;
+        }
+
+        .project {
+            margin-bottom: 20px;
+        }
+
+        .project-name {
+            font-weight: 600;
+        }
+
+        .project-info {
+            display: flex;
+            justify-content: space-between;
+            background-color: #c8e6d5;
+        }
+
+        .position {
+            margin: 5px 0;
+            font-style: italic;
+        }
+    </style>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+</head>
+<body>
+<div class="body">
+    <div class="header">
+        <div id="name"><span>程山川</span></div>
+        <div id="base-info">
+            <div><span><i class="far fa-envelope"></i>&nbsp;Email : ch.shanchuan@gmail.com</span></div>
+            <div><span><i class="fas fa-mobile-alt"></i>&nbsp;&nbsp;Mobile : (+86)18940874730</span></div>
+            <div><span><i class="fab fa-github"></i>&nbsp;GitHub : https://github.com/webhugo</span></div>
+        </div>
+    </div>
+    <div class="education title">
+        <p class="main-title"><span><i class="fas fa-graduation-cap"></i>&nbsp;教育背景</span></p>
+        <div class="line">
+            <p></p>
+        </div>
+        <div class="education-content content">
+            <div style="display: flex;justify-content: space-between;">
+                <p><span style="font-weight: bold">大连理工大学</span></p>
+                <p>Sep 2015 – 至今</p>
+            </div>
+            <p>
+                <span>在读学士</span>&nbsp;&nbsp;&nbsp;
+                <span>软件工程</span>&nbsp;&nbsp;&nbsp;
+                <span>GPA 3.24(标准算法) / CET6 531</span>
+            </p>
+            <p>预计毕业时间2019年6月</p>
+        </div>
+    </div>
+    <div class="skill title">
+        <p class="main-title"><span><i class="fas fa-wrench"></i>&nbsp;学习技能</span></p>
+        <div class="line"></div>
+        <div class="skill-content content">
+            <ul>
+                <li>掌握 Java、NodeJS, 了解 Python/C/C++ 等语言, 熟悉Linux基本操作, 对 Redis 等 NoSQL和 MySQL 等数据库能基本使用。</li>
+                <li>熟悉 NodeJS 后端开发, 熟悉 Koa 等框架的使用，熟悉 Sequelize、Mocha 等类库的使用, 能够完成正常的后端逻辑，有项目经验。</li>
+                <li>熟悉 JavaWeb 后端开发, 熟悉 Spring、Mybatis 等框架的使用, 并尝试开发框架 : (https://github.com/webhugo/kobe_framework),
+                    能够完成正常的后端逻辑, 有项目经验。
+                </li>
+                <li>具备前端开发能力, 了解 React、Redux, 熟悉 Webpack、Gulp 等前端构建工具, 有项目经验。</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="experience title">
+        <p class="main-title"><span><i class="fas fa-cogs"></i>&nbsp;项目经历</span></p>
+        <div class="line"></div>
+        <div class="experience-content">
+            <div class="project content">
+                <p class="project-info"><span><span class="project-name">优云</span><span>·OurEDA 创新团队</span></span><span>May 2017 – 至今</span>
+                </p>
+                <p class="position">后端开发者(唯一)/网页版开发者(唯一)/主要维护者</p>
+                <div class="detail">
+                    <ul>
+                        <li>优云是一个用于文件传输的App，针对于目前校园内文件分享慢、不便捷，共享观念差等问题开发。
+                        </li>
+                        <li>无需登录(也支持手机/微信/qq登录)、短信注册、安全、凭6位提取码即可下载文件、文件快传、断点续传、可即时通讯交流、社区活动推送、支持多条件查询用户、文件等功能。
+                        </li>
+                        <li>使用 Spring + Mybatis 搭建整体框架，由最开始的 Shiro + Redis 实现登录验证，考虑到将来多服务器分布式session问题，转而使用 JWT 实现登录验证，并实现自动部署上线。</li>
+                        <li>前端主要使用 React + Redux + Webpack + Sass，Nginx 实现跨域问题，适配手机/平板。</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="project  content">
+                <p class="project-info"><span><span class="project-name">rootlink</span><span>·OurEDA 创新团队</span>&nbsp;&nbsp;<span
+                        style="font-style: italic">(http://www.rootlink.cn/)</span></span><span>Oct 2017 – 至今</span>
+                </p>
+                <p class="position">后端开发者(唯一)/主要维护者</p>
+                <div class="detail">
+                    <ul>
+                        <li>rootlink 是一个免费的物联网云平台，旨在利用网络、开源硬件和软件、智能手机和 App 共同打造一个物联网智能中心。
+                        </li>
+                        <li>通过 rootlink 提供的数据接口，用户可以把自己的传感器通过互联网接入 rootlink 物联网云平台，从而实现随时随地获取传感器数据，为一些智能家居设备接入互联网提供了物联网云平台支持。
+                        </li>
+                        <li>使用 Koa搭建后端，完成整个项目的模块化结构设计，主要使用 Socket.io 进行通讯
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="project content">
+                <p class="project-info"><span><span
+                        class="project-name">狼人杀</span></span><span>Oct 2016 – Feb 2017</span></p>
+                <p class="position">后端开发者(唯一)</p>
+                <div class="detail">
+                    <ul>
+                        <li>狼人杀是一个线下的游戏终端，模拟上帝功能，完成播音、逻辑判定、与嵌入式设备结合控制灯光等功能，目前支持三套组合 预女猎白/预女猎守白狼王/预女猎丘比特
+                        </li>
+                        <li>该产品大大增强了玩家游戏体验，该产品属于外包项目，已经交付，目前在大连某些桌游店上线。</li>
+                        <li>参考 MVC 思想，抽离 Controller 接收前端请求和负责调度，使用 Java 完成mp3播放功能，大量使用 Socket.io 通讯和 Promise 异步编程</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="other title">
+        <p class="main-title"><span><i class="fab fa-github-alt"></i>&nbsp;其他</span></p>
+        <div class="line"></div>
+        <div class="other-content  content">
+            <ul>
+                <li>全国计算机程序设计大赛一等奖</li>
+                <li>个人博客 : https://webhugo.github.io/</li>
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+</html>
