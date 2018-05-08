@@ -1,0 +1,81 @@
+#!/usr/bin/env node
+let request = require("request");
+request = request.defaults({jar: true})//保存cookie
+let querystring = require("querystring");
+let os = require('os');
+let form = {
+    setcookie: 1,
+    username: 'shf19961008',
+    encrypt: 1,
+    pswd: 'f843f2917fb2118fa39d7aa5db54c46c',
+    voucher: "",
+    login: '立即开始使用此网络',
+    lang: 'zh_CN'
+};
+
+let formData = querystring.stringify(form);
+let contentLength = formData.length;
+
+function getLocalIps(flagIpv6) {
+    let ifaces = os.networkInterfaces();
+    let ips = [];
+    let func = function (details) {
+        if (!flagIpv6 && details.family === 'IPv6') {
+            return;
+        }
+        ips.push(details.address);
+    };
+    for (let dev in ifaces) {
+        ifaces[dev].forEach(func);
+    }
+    return ips;
+
+}
+request({
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded'
+            },
+            uri: 'http://42.121.98.148/as/s/login2/?gw_id=14F2C52F867&gw_address=192.168.64.1&gw_port=2060&url=http%3A%2F%2F192.168.64.1%3A2060%2F',
+            body: formData,
+            method: 'POST'
+        }, function (err, res, body) {
+            try {
+                let str1 = body.match(/location.href=.+;/)[0];
+                let str2 = str1.match(/".+"/)[0];
+                let str3 = str2.replace("\"", "");
+                str3 = str3.replace("\"", "");
+                request.get(str3, function optionalCallback(err, httpResponse, body) {
+                    console.log(body);
+                });
+            } catch (e) {
+				console.log(e);
+            }
+        });
+setInterval(function () {
+    let ips = String(getLocalIps());
+    if (ips.indexOf("192.168") !== -1) {
+			
+        request({
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded'
+            },
+            uri: 'http://42.121.98.148/as/s/login2/?gw_id=14F2C52F867&gw_address=192.168.64.1&gw_port=2060&url=http%3A%2F%2F192.168.64.1%3A2060%2F',
+            body: formData,
+            method: 'POST'
+        }, function (err, res, body) {
+            try {
+                let str1 = body.match(/location.href=.+;/)[0];
+                let str2 = str1.match(/".+"/)[0];
+                let str3 = str2.replace("\"", "");
+                str3 = str3.replace("\"", "");
+                request.get(str3, function optionalCallback(err, httpResponse, body) {
+                    console.log(body);
+                });
+            } catch (e) {
+				console.log(e);
+            }
+        });
+    }
+}, 5*1000);
+
+
